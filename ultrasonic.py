@@ -8,9 +8,9 @@ GPIO.setmode(GPIO.BCM)  # Configuracion de como se van a leer los pines en la pl
 
 	# Renombrar las variables
 
-Eco = 21  # Entrada de captura de eco	
-Trig = 20 # Salida del ecco 
-Off = 17  # Boton para finalizar el proceso
+Eco = 21  # Entrada de captura de eco	- Echo capture input
+Trig = 20 # Salida del ecco - Ecco output
+Off = 17  # Boton para finalizar el proceso - Button to finish the process
 
 	# Configuracion de los puertos
 
@@ -37,7 +37,7 @@ while (GPIO.input(Off) == GPIO.LOW):
 		
 	diferencia = stop - start  # Se calcula la diferencia de tiempo 
 	distancia = (diferencia * 34300)/2 # velocidad por tiempo entre 2
-	  #Distancia en centímetros	
+	  #Distancia en centÃ­metros	
 	print distancia  # Mostramos la distancia
 	
 	time.sleep (1)  # Tiempo de muestreo 1 segundo
